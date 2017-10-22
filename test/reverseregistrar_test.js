@@ -81,8 +81,8 @@ describe('ReverseRegistrar', function() {
                         });
                 });
             })
-            .then(registrar => ens.setSubnodeOwnerAsync(0, web3.sha3('reverse'), accounts[0], {from: accounts[0]}))
-            .then(result => ens.setSubnodeOwnerAsync(namehash('reverse'), web3.sha3('addr'), registrar.address, {from: accounts[0]}));
+            .then(registrar => ens.setSubnodeOwnerAsync(0, web3.util.sha3('reverse'), accounts[0], {from: accounts[0]}))
+            .then(result => ens.setSubnodeOwnerAsync(namehash('reverse'), web3.util.sha3('addr'), registrar.address, {from: accounts[0]}));
     });
 
     it('calculates node hashes correctly', function() {
